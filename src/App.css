@@ -1,38 +1,154 @@
+ul,
+li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 .App {
-  text-align: center;
+  color: #333;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a:link,
+a:visited {
+  text-decoration: none;
+  color: inherit;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+header {
+  height: 50px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+nav {
+  width: 1040px;
+  height: 100%;
+  margin: 0 auto;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+}
+
+.logo-area {
+  display: flex;
+}
+
+.menu {
+  width: 32px;
+  height: 50px;
+  background-image: url("https://static.wanted.co.kr/images/icon-menu.png");
+  margin-right: 5px;
+  background-repeat: no-repeat;
+  background-position: left center;
+  background-size: 17px 14px;
+}
+
+.logo {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.logo img {
+  height: 17px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.nav-area {
+  height: inherit;
+}
+
+.nav-area ul {
+  width: 100%;
+  display: flex;
+  height: inherit;
+}
+.nav-area ul li {
+  height: inherit;
+  line-height: 50px;
+}
+.nav-area ul li a {
+  padding: 15px;
+  position: relative;
+  font-weight: 600;
+  font-size: 14px;
+}
+.nav-area ul li a:hover::after {
+  display: block;
+  content: "";
+  height: 2px;
+  background: #ccc;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+}
+.nav-area ul li a.new::before {
+  content: "New";
+  width: auto;
+  height: auto;
+  color: #36f;
+  font-size: 10px;
+  right: -9px;
+  text-align: left;
+  position: absolute;
+  top: -8px;
+}
+.nav-area ul li a.beta::before {
+  content: "Beta";
+  width: auto;
+  height: auto;
+  color: #36f;
+  font-size: 10px;
+  right: -9px;
+  text-align: left;
+  position: absolute;
+  top: -8px;
+}
+
+.user-info-area {
+  display: flex;
+  align-items: center;
+}
+
+.user-info-area .ico {
+  padding: 0 10px;
+  cursor: pointer;
+}
+
+.ico.alert-button {
+  margin-right: 10px;
+}
+
+.user-avatar {
+  width: 30px;
+  height: 30px;
+  border: 1px solid #e1e2e3;
+  background-color: #fff;
+  border-radius: 30px;
+  overflow: hidden;
+  margin-right: 5px;
+}
+.img-wrap {
+  width: 28px;
+  height: 28px;
+  margin: 1px auto;
+  overflow: hidden;
+  border-radius: 28px;
+}
+.user-avatar img {
+  width: 100%;
+}
+
+.divider {
+  margin: 10px;
+  width: 1px;
+  height: 10px;
+  background-color: #e1e2e3;
+}
+
+.button-area button {
+  padding: 0px 10px;
+  height: 30px;
+  border: 1px solid #e1e2e3;
+  border-radius: 30px;
+  background-color: #fff;
+  font-size: 13px;
+  color: #666;
 }
